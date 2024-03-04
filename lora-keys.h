@@ -14,10 +14,10 @@ LoRaMacRegion_t loraWanRegion = ACTIVE_REGION;
 // LoraWan Class, Class A and Class C are supported
 DeviceClass_t loraWanClass = CLASS_A;
 // the application data transmission duty cycle.  value in [ms].
-uint32_t appTxDutyCycle = 30 * 1000;
+uint32_t appTxDutyCycle = 1 * 1000;
 // OTAA or ABP
 // bool overTheAirActivation = true; // OTAA
-bool overTheAirActivation = false; // OTAA
+bool overTheAirActivation = false; // ABP
 // ADR enable
 bool loraWanAdr = true;
 // Indicates if the node is sending confirmed or unconfirmed messages
