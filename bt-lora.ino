@@ -78,6 +78,10 @@ void setup() {
   Mcu.begin();
   deviceState = DEVICE_STATE_INIT;
   pinMode(LED, OUTPUT);
+
+  // The chip ID is essentially its MAC address(length: 6 bytes).
+  uint64_t chipid = ESP.getEfuseMac();
+  Serial.println("DeviceId=" + String(chipid, HEX));
 }
 
 // Prepares the payload of the frame 
